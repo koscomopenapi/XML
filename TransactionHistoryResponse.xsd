@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TransactionHistoryResponse"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransactionHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="commonHeader"/>
+        <xs:element ref="accInfo"/>
+        <xs:element ref="body"/>
+        <xs:element ref="transList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="commonHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="reqIdPlatform"/>
+        <xs:element ref="reqIdConsumer"/>
+        <xs:element ref="certDn"/>
+        <xs:element ref="ci"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reqIdPlatform" type="xs:NCName"/>
+  <xs:element name="reqIdConsumer" type="xs:NCName"/>
+  <xs:element name="certDn" type="xs:string"/>
+  <xs:element name="ci" type="xs:string"/>
+  <xs:element name="accInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="realAccNo"/>
+        <xs:element ref="vtAccNo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="realAccNo" type="xs:NMTOKEN"/>
+  <xs:element name="vtAccNo" type="xs:integer"/>
+  <xs:element name="body">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="queryResult"/>
+        <xs:element ref="queryParameter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="totalCnt"/>
+        <xs:element ref="count"/>
+        <xs:element ref="page"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="totalCnt" type="xs:integer"/>
+  <xs:element name="queryParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fromDate"/>
+        <xs:element ref="toDate"/>
+        <xs:element ref="isinCode"/>
+        <xs:element ref="side"/>
+        <xs:element ref="count"/>
+        <xs:element ref="page"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fromDate" type="xs:NMTOKEN"/>
+  <xs:element name="toDate" type="xs:NMTOKEN"/>
+  <xs:element name="side" type="xs:NCName"/>
+  <xs:element name="transList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="transaction"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="transaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="isinCode"/>
+        <xs:element ref="transDate"/>
+        <xs:element ref="transType"/>
+        <xs:element ref="changeAmt"/>
+        <xs:element ref="changeQty"/>
+        <xs:element ref="qty"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="transDate" type="xs:NMTOKEN"/>
+  <xs:element name="transType" type="xs:NCName"/>
+  <xs:element name="changeAmt" type="xs:integer"/>
+  <xs:element name="changeQty" type="xs:integer"/>
+  <xs:element name="qty" type="xs:integer"/>
+  <xs:element name="count" type="xs:integer"/>
+  <xs:element name="page" type="xs:integer"/>
+  <xs:element name="isinCode" type="xs:NCName"/>
+</xs:schema>

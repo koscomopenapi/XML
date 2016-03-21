@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="interestSymbolListResponse"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interestSymbolListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="commonHeader"/>
+        <xs:element ref="accInfo"/>
+        <xs:element ref="groupList"/>
+        <xs:element ref="resp"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="commonHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="reqIdPlatform"/>
+        <xs:element ref="reqIdConsumer"/>
+        <xs:element ref="certDn"/>
+        <xs:element ref="ci"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reqIdPlatform" type="xs:NCName"/>
+  <xs:element name="reqIdConsumer" type="xs:NCName"/>
+  <xs:element name="certDn" type="xs:string"/>
+  <xs:element name="ci" type="xs:string"/>
+  <xs:element name="accInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="realAccNo"/>
+        <xs:element ref="vtAccNp"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="realAccNo" type="xs:NCName"/>
+  <xs:element name="vtAccNp" type="xs:NCName"/>
+  <xs:element name="groupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="group"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="group">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="groupName"/>
+        <xs:element ref="modifyDate"/>
+        <xs:element maxOccurs="unbounded" ref="isinCode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groupName" type="xs:NCName"/>
+  <xs:element name="modifyDate" type="xs:integer"/>
+  <xs:element name="isinCode" type="xs:NCName"/>
+  <xs:element name="resp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="respCode"/>
+        <xs:element ref="respMsg"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="respCode" type="xs:integer"/>
+  <xs:element name="respMsg" type="xs:NCName"/>
+</xs:schema>

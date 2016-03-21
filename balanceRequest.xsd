@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="balanceRequest"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="balanceRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="partner"/>
+        <xs:element ref="commonHeader"/>
+        <xs:element ref="devInfo"/>
+        <xs:element ref="portfolioRequestBody"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="partner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="comId"/>
+        <xs:element ref="srvId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="comId" type="xs:NCName"/>
+  <xs:element name="srvId" type="xs:NCName"/>
+  <xs:element name="commonHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="reqIdPlatform"/>
+        <xs:element ref="reqIdConsumer"/>
+        <xs:element ref="certDn"/>
+        <xs:element ref="ci"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reqIdPlatform" type="xs:NCName"/>
+  <xs:element name="reqIdConsumer" type="xs:NCName"/>
+  <xs:element name="certDn" type="xs:string"/>
+  <xs:element name="ci" type="xs:string"/>
+  <xs:element name="devInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ipAddr"/>
+        <xs:element ref="macAddr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ipAddr" type="xs:integer"/>
+  <xs:element name="macAddr" type="xs:NMTOKEN"/>
+  <xs:element name="portfolioRequestBody">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="accInfo"/>
+        <xs:element ref="queryType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="realAccNo"/>
+        <xs:element ref="vtAccNp"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="realAccNo" type="xs:NMTOKEN"/>
+  <xs:element name="vtAccNp" type="xs:integer"/>
+  <xs:element name="queryType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="assetType"/>
+        <xs:element ref="rspType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="assetType" type="xs:NCName"/>
+  <xs:element name="rspType" type="xs:NCName"/>
+</xs:schema>

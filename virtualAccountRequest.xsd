@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="virtualAccountRequest"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="virtualAccountRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="commonHeader"/>
+        <xs:element ref="virtualAccountList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="commonHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="reqIdPlatform"/>
+        <xs:element ref="reqIdConsumer"/>
+        <xs:element ref="certDn"/>
+        <xs:element ref="ci"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reqIdPlatform" type="xs:NCName"/>
+  <xs:element name="reqIdConsumer" type="xs:NCName"/>
+  <xs:element name="certDn" type="xs:string"/>
+  <xs:element name="ci" type="xs:string"/>
+  <xs:element name="virtualAccountList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="virtualAccount"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="virtualAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="trCode"/>
+        <xs:element ref="realAccNo"/>
+        <xs:element ref="vtAccNo"/>
+        <xs:element ref="vtAccAlias"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trCode" type="xs:NCName"/>
+  <xs:element name="realAccNo" type="xs:NMTOKEN"/>
+  <xs:element name="vtAccNo" type="xs:NCName"/>
+  <xs:element name="vtAccAlias" type="xs:NCName"/>
+</xs:schema>

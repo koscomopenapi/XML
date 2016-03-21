@@ -1,0 +1,32 @@
+<root>
+    <transactionHistoryRequest>
+        <partner>
+            <comId>uberple</comId>
+            <srvId>SNEK</srvId>
+        </partner>
+        <commonHeader>
+            <reqIdPlatform>P0001-ABC-0001</reqIdPlatform>
+            <reqIdConsumer>Uberple-00001</reqIdConsumer>
+            <certDn>cn=김흥재_0000033643,ou=KOSCOM,ou=LicensedCA,o=SignKorea,c=KR</certDn>
+            <ci>834f889833602f174a706138f19778a2dc6eee0f834f889833602f174a706138f19778a2dc6eee0feee0f22</ci>
+        </commonHeader>
+        <devInfo>
+            <ipAddr>192168001010</ipAddr>
+            <macAddr>7054D27EE247</macAddr>
+        </devInfo>
+        <accInfo>
+            <realAccNo>001-01-992323232</realAccNo>
+            <vtAccNo>123214985324234</vtAccNo>
+        </accInfo>
+        <transactionHistoryRequestBody>
+            <queryParameter>
+                <fromDate>2016-01-03</fromDate>
+                <toDate>2016-03-01</toDate>
+                <isinCode>KR7005930003</isinCode>
+                <side>BID</side>
+                <count>50</count>
+                <page>0</page>
+            </queryParameter>
+        </transactionHistoryRequestBody>
+    </transactionHistoryRequest>
+</root>

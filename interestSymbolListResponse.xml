@@ -1,0 +1,36 @@
+<root>
+    <interestSymbolListResponse>
+        <commonHeader>
+            <reqIdPlatform>P0001-ABC-0001</reqIdPlatform>
+            <reqIdConsumer>Uberple-00001</reqIdConsumer>
+            <certDn>cn=김흥재_0000033643,ou=KOSCOM,ou=LicensedCA,o=SignKorea,c=KR</certDn>
+            <ci>834f889833602f174a706138f19778a2dc6eee0f834f889833602f174a706138f19778a2dc6eee0feee0f22</ci>
+        </commonHeader>
+        <accInfo>
+            <realAccNo>XXX-XX-XXXXXXX</realAccNo>
+            <vtAccNp>XXX-XX-XXXXXXXXXX-XX-XXXXXXX</vtAccNp>
+        </accInfo>
+        <groupList>
+            <group>
+                <groupName>급등후보주1</groupName>
+                <modifyDate>20160103</modifyDate>
+                <isinCode>KR7005930000</isinCode>
+                <isinCode>KR7005930001</isinCode>
+                <isinCode>KR7005930002</isinCode>
+            </group>
+            <group>
+                <groupName>상한가예상주2</groupName>
+                <modifyDate>20160105</modifyDate>
+                <isinCode>KR7007730000</isinCode>
+                <isinCode>KR7007730001</isinCode>
+                <isinCode>KR7007730002</isinCode>
+                <isinCode>KR7007730003</isinCode>
+                <isinCode>KR7007730004</isinCode>
+            </group>
+        </groupList>
+        <resp>
+            <respCode>200</respCode>
+            <respMsg>OK</respMsg>
+        </resp>
+    </interestSymbolListResponse>
+</root>

@@ -1,0 +1,28 @@
+<root>
+    <realAccountListResponse>
+        <commonHeader>
+            <reqIdPlatform>P0001-ABC-0001</reqIdPlatform>
+            <reqIdConsumer>Uberple-00001</reqIdConsumer>
+            <certDn>cn=김흥재_0000033643,ou=KOSCOM,ou=LicensedCA,o=SignKorea,c=KR</certDn>
+            <ci>834f889833602f174a706138f19778a2dc6eee0f834f889833602f174a706138f19778a2dc6eee0feee0f22</ci>
+        </commonHeader>
+        <accountList>
+            <account>
+                <accNo>12390000</accNo>
+                <accType>BRK</accType>
+            </account>
+            <account>
+                <accNo>12390001</accNo>
+                <accType>BRK</accType>
+            </account>
+            <account>
+                <accNo>12390002</accNo>
+                <accType>BRK</accType>
+            </account>
+        </accountList>
+        <resp>
+            <respCode>200</respCode>
+            <respMsg>OK</respMsg>
+        </resp>
+    </realAccountListResponse>
+</root>
